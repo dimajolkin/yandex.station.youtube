@@ -1,0 +1,12 @@
+{
+    "name": "delkin/yandex.station.youtube",
+    "authors": [
+        {
+            "name": "delkin",
+            "email": "delkin@dealersocket.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    }
+}

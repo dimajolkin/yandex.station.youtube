@@ -1,0 +1,15 @@
+POST https://yandex.ru/video/station
+Content-Type: application/json
+
+{
+  msg: {
+    play_uri: '<iframe src="//www.youtube.com/embed/UGn27IkWOqU?enablejsapi=1&amp;wmode=opaque" frameborder="0" scrolling="no" allowfullscreen="1" allow="autoplay; fullscreen; accelerometer; gyroscope; picture-in-picture" aria-label="Video"></iframe>',
+    player_id: "youtube",
+    provider_item_id: "http://www.youtube.com/watch?v=UGn27IkWOqU",
+    provider_name: "youtube.com",
+    source_host: "www.youtube.com",
+    type: "video",
+    visible_url: "http://www.youtube.com/watch?v=UGn27IkWOqU"
+  },
+  device: "04107884c9144c12030f"
+}
