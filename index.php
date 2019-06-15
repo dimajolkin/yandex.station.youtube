@@ -36,7 +36,7 @@ $data = [
         'type' => 'video',
         'visible_url' => "http://www.youtube.com/watch?v=$youtubeVideoId",
     ],
-    'device' => '04107884c9144c12030f',
+    'device' => '<deviceID>',
 ];
 
 $headers = [
