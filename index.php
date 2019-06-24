@@ -2,7 +2,6 @@
 
 include __DIR__ . '/vendor/autoload.php';
 
-
 function create_cookies(array $array)
 {
     $items = [];
@@ -13,12 +12,8 @@ function create_cookies(array $array)
     return implode('; ', $items);
 }
 
-/**
- * Session_id required
- */
-$cookiesArray = json_decode(file_get_contents('cookies.json'), true);
-$cookiesData = create_cookies($cookiesArray);
 
+$cookiesArray = json_decode(file_get_contents('cookies.json'));
 
 $jar = new \GuzzleHttp\Cookie\CookieJar;
 $client = new \GuzzleHttp\Client([
@@ -26,7 +21,6 @@ $client = new \GuzzleHttp\Client([
 ]);
 
 $youtubeVideoId = 'VB5xtFwS-fg';
-//https://youtu.be/VB5xtFwS-fg
 
 $data = [
     'msg' => [
@@ -48,11 +42,8 @@ $headers = [
     'x-csrf-token' => 'u36710a0145deeae5bcdbde83f93f9185',
 ];
 $body = json_encode($data);
-
 $request = new \GuzzleHttp\Psr7\Request('POST', 'https://yandex.ru/video/station', $headers, $body);
-
 $response = $client->send($request);
-
 var_dump($response->getReasonPhrase());
 echo $response->getStatusCode(); # 200
 echo $response->getHeaderLine('content-type'); # 'application/json; charset=utf8'
